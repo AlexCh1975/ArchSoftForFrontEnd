@@ -1,6 +1,6 @@
 package InMemoryModel;
 
-import java.util.ArrayList;
+import java.util.ArrayList; 
 import java.util.List;
 
 import ModelElements.PoligonalModel;
@@ -18,6 +18,7 @@ public class ModelStore implements iModelChanger{
 
     public ModelStore(iModelChangeObserver[] changeObservers) {
         this.changeObservers = changeObservers;
+        
         this.models = new ArrayList<PoligonalModel>();
         this.cameras = new ArrayList<Camera>();
         this.flashes = new ArrayList<Flash>();
