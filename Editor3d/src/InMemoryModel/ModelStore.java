@@ -7,6 +7,7 @@ import ModelElements.PoligonalModel;
 import ModelElements.Flash;
 import ModelElements.Camera;
 import ModelElements.Scene;
+import ModelElements.Texture;
 
 public class ModelStore implements iModelChanger{
     public List<PoligonalModel> models;
@@ -16,13 +17,19 @@ public class ModelStore implements iModelChanger{
     private iModelChangeObserver[] changeObservers;
 
 
-    public ModelStore(iModelChangeObserver[] changeObservers) {
+     public ModelStore(iModelChangeObserver[] changeObservers) throws Exception {
         this.changeObservers = changeObservers;
-        
+
         this.models = new ArrayList<PoligonalModel>();
-        this.cameras = new ArrayList<Camera>();
-        this.flashes = new ArrayList<Flash>();
         this.scenes = new ArrayList<Scene>();
+        this.flashes = new ArrayList<Flash>();
+        this.cameras = new ArrayList<Camera>();
+
+        List<Texture> Textures = new ArrayList<>();
+        models.add(new PoligonalModel(Textures));
+        flashes.add(new Flash());
+        cameras.add(new Camera());
+        scenes.add(new Scene(0, models, flashes, cameras));
     }
 
     public Scene getScene(int id){
