@@ -9,7 +9,7 @@ public class Flash {
     public Point3D location;
     public Angle3D angle;
     public Color color;
-    public Float power;
+    public float power;
 
     // Поворот освещения на угл angle
     public void rotate(Angle3D angle){

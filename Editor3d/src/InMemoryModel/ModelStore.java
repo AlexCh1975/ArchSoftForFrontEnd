@@ -17,7 +17,7 @@ public class ModelStore implements iModelChanger{
     private iModelChangeObserver[] changeObservers;
 
 
-     public ModelStore(iModelChangeObserver[] changeObservers) throws Exception {
+     public ModelStore(iModelChangeObserver[] changeObservers) throws Exception  {
         this.changeObservers = changeObservers;
 
         this.models = new ArrayList<PoligonalModel>();
