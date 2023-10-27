@@ -7,3 +7,4 @@ import Domain.MovieReview;
 public interface iPrintMovieReviews {
     public void writeMovieReviews(List<MovieReview> MovieReviewList);
 }
+
